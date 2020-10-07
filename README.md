@@ -32,8 +32,12 @@ cat part.txt
 cat part.txt | python 21mapper.py
 cat part.txt | python 21mapper.py | sort
 cat part.txt | python 21mapper.py | sort  | python 22reducer.py
-
 ```
+This command is used to process the larger file i.e purchases.txt in Case 1
+``` cat purchases.txt | python 11mapper.py | sort  | python 13reducer.py ```
+
+This command is used to process the larger file i.e purchases.txt in Case 2
+``` cat purchases.txt | python 21mapper.py | sort  | python 22reducer.py ```
 
 ## References
 
