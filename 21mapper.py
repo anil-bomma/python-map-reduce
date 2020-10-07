@@ -2,16 +2,15 @@
 # Easy to test locally with Bash
 
 
+import sys
+with open("purchases.txt", "r") as input:
+    with open("departmentmapper.txt", "w") as output:
 
-import sys 
+        # iterate through each line provided via standard input
+      for line in sys.stdin:
+        datalist = line.strip().split("    ")
+        if (len(datalist) == 6):
+          date, time, store, department, cost, paymentType = datalist
 
-
-# iterate through each line provided via standard input
-for line in sys.stdin:
-  datalist = line.strip().split("    ")
-  if (len(datalist) == 6) : 
-    date, time,store, department, cost, paymentType = datalist
-
-    # print intermediate key-value pairs to standard output
-    print(store + "\t" + cost + "\n")
-
+        # print intermediate key-value pairs to standard output
+          print(store + "\t" + cost + "\n")
