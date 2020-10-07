@@ -4,7 +4,7 @@
 
 # open returns a file object
 with open("part.txt", "r") as input:
-  with open("output11mapped.txt", "w") as output:
+  with open("departmentmapper.txt", "w") as output:
 
     # iterate through each line in the file object
     for line in input:
@@ -13,8 +13,7 @@ with open("part.txt", "r") as input:
         date, time,store, department, amount, paymentType = datalist
 
         # output intermediate key-value pairs
-        output.write(store + "\t" + amount + "\n")
+        output.write(department + "\t" + amount + "\n")
 
         # display to console (not required - just for the user)
-        print(store + "\t" + amount + "\n")
-
+        print(department + "\t" + amount + "\n")

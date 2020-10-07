@@ -5,8 +5,8 @@
 # An inplace sort is good for small data only 
 # This step is done automatically in Hadoop
 
-with open("output11mapped.txt", "r") as unsorted:
-  with open("output12sorted.txt", "w") as sorted:
+with open("departmentmapper.txt", "r") as unsorted:
+  with open("departmentsorter.txt", "w") as sorted:
 
     dataList = unsorted.readlines()
     dataList.sort()
@@ -15,4 +15,3 @@ with open("output11mapped.txt", "r") as unsorted:
     for line in dataList:
       sorted.write(line)  # output
       print (line)        # display to console
-
